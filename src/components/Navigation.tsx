@@ -74,6 +74,7 @@ const Navigation = () => {
               alt="Cricket Jersey Designs Logo"
               className="h-12 w-auto"
             />
+            <span className="sr-only">FastColors Sublimation</span>
           </button>
 
           <div className="hidden md:flex space-x-8">
@@ -82,14 +83,14 @@ const Navigation = () => {
                 key={item}
                 onClick={() => scrollToSection(item)}
                 className={`font-medium transition-colors duration-300 relative group ${(location.pathname === '/gallery' && item === 'Gallery') || (location.pathname === '/' && item === 'Home' && !isScrolled) // Simple highlighting logic
-                    ? 'text-[#BD22B8]'
-                    : 'text-black hover:text-gray-600'
+                  ? 'text-[#BD22B8]'
+                  : 'text-black hover:text-gray-600'
                   }`}
               >
                 {item}
                 <span className={`absolute bottom-0 left-0 h-0.5 bg-[#BD22B8] transition-all duration-300 ${(location.pathname === '/gallery' && item === 'Gallery')
-                    ? 'w-full'
-                    : 'w-0 group-hover:w-full'
+                  ? 'w-full'
+                  : 'w-0 group-hover:w-full'
                   }`}></span>
               </button>
             ))}
